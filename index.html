@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="main">
-        <div class="screen"></div>
-        <div class="calculator">
-            <button>0</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>+</button>
-            <button>-</button>
-            <button>x</button>
-            <button>/</button>
-            <button>=</button>
+    <table id="calculator">
+        <div class="screen">
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="result" placeholder="0">
+                </td>
+                <td><input type="button" id="clear" value="clear" style="height:50px"></td>
+            </tr>
         </div>
-    </div>
+        <div class="buttons">
+            <tr>
+                <td colspan="1">
+                    <input type="button" value="1" style="height:40px" id="one">
+                    <input type="button" value="2" style="height:40px" id="two">
+                    <input type="button" value="3" style="height:40px" id="three">
+                    <input type="button" value="x" style="height:40px" id="multiply">
+                    <input type="button" value="÷" style="height:40px" id="divide">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="4" style="height:40px" id="four">
+                    <input type="button" value="5" style="height:40px" id="five">
+                    <input type="button" value="6" style="height:40px" id="six">
+                    <input type="button" value="+" style="height:40px" id="add">
+                    <input type="button" value="%" style="height:40px" id="percentage">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" value="7" style="height:40px" id="seven">
+                    <input type="button" value="8" style="height:40px" id="eight">
+                    <input type="button" value="9" style="height:40px" id="nine">
+                    <input type="button" value="-" style="height:40px" id="subtract">
+                    <input type="button" value="^" style="height:40px" id="exponent">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="button" value="±" style="height:40px" id="negative">
+                    <input type="button" value="0" style="height:40px" id="zero">
+                    <input type="button" value="." style="height:40px" id="decimal-point">
+                    <input type="button" value="=" style="height:40px" id="equal-sign">
+                    <input type="button" value="π" style="height:40px" id="pi">
+                </td>
+            </tr>
+        </div>
+    </table>
     <script src="script.js"></script>
 </body>
+
 </html>
