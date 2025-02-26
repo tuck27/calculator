@@ -9,55 +9,43 @@
 </head>
 
 <body>
-    <table id="calculator">
-        <div class="screen">
-            <tr>
-                <td colspan="4">
-                    <input type="text" id="result" placeholder="0">
-                </td>
-                <td><input type="button" id="clear" value="clear" style="height:50px"></td>
-            </tr>
+    <div id="calculator">
+        <div id="content">
+            <form>
+                <div id="output">
+                    <input type="text" id="result">
+                </div>
+                <div class="btn">
+
+                    <input type="button" value="AC" onClick="Clear()" id="clear">
+                    <input type="button" value="←" onclick="Back()" id="backspace">
+                    <input type="button" value='%' onclick="Solve('%')">
+                    <input type="button" value='/' onclick="Solve('/')">
+                    <br>
+                    <input type="button" value='7' onclick="Solve('7')">
+                    <input type="button" value='8' onclick="Solve('8')">
+                    <input type="button" value='9' onclick="Solve('9')">
+                    <input type="button" value='x' onclick="Solve('*')">
+                    <br>
+                    <input type="button" value='4' onclick="Solve('4')">
+                    <input type="button" value='5' onclick="Solve('5')">
+                    <input type="button" value='6' onclick="Solve('6')">
+                    <input type="button" value='-' onclick="Solve('-')">
+                    <br>
+                    <input type="button" value='1' onclick="Solve('1')">
+                    <input type="button" value='2' onclick="Solve('2')">
+                    <input type="button" value='3' onclick="Solve('3')">
+                    <input type="button" value='+' onclick="Solve('+')">
+                    <br>
+                    <input type="button" value='00' onclick="Solve('00')">
+                    <input type="button" value='0' onclick="Solve('0')">
+                    <input type="button" value='.' onclick="Solve('.')">
+                    <input type="button" value='=' onclick="Result()">
+                </div>
+            </form>
         </div>
-        <div class="buttons">
-            <tr>
-                <td colspan="1">
-                    <input type="button" value="1" style="height:40px" id="one">
-                    <input type="button" value="2" style="height:40px" id="two">
-                    <input type="button" value="3" style="height:40px" id="three">
-                    <input type="button" value="x" style="height:40px" id="multiply">
-                    <input type="button" value="÷" style="height:40px" id="divide">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="button" value="4" style="height:40px" id="four">
-                    <input type="button" value="5" style="height:40px" id="five">
-                    <input type="button" value="6" style="height:40px" id="six">
-                    <input type="button" value="+" style="height:40px" id="add">
-                    <input type="button" value="%" style="height:40px" id="percentage">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <input type="button" value="7" style="height:40px" id="seven">
-                    <input type="button" value="8" style="height:40px" id="eight">
-                    <input type="button" value="9" style="height:40px" id="nine">
-                    <input type="button" value="-" style="height:40px" id="subtract">
-                    <input type="button" value="^" style="height:40px" id="exponent">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4">
-                    <input type="button" value="±" style="height:40px" id="negative">
-                    <input type="button" value="0" style="height:40px" id="zero">
-                    <input type="button" value="." style="height:40px" id="decimal-point">
-                    <input type="button" value="=" style="height:40px" id="equal-sign">
-                    <input type="button" value="π" style="height:40px" id="pi">
-                </td>
-            </tr>
-        </div>
-    </table>
-    <script src="script.js"></script>
+        </table>
+        <script src="script.js"></script>
 </body>
 
 </html>
