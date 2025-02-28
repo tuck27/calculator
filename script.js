@@ -1,42 +1,32 @@
-const calculator = document.querySelector(".calculator");
-const keys = document.querySelector(".calculator_keys");
+//variable to store the current input
+let currentInput = "";
 
-keys.addEventListener("click", e => {
-    if (e.target.matches('button')) {
-        //do something
-    }
-})
+//Function to update the input display
+function updateDisplay() {
+    document.getElementById("result").value = currentInput;
+}
 
+function Solve(value) {
+    if (currentInput === "" && (value === "+" || value === "-" || value === "*" || value === "/")) {
+        return;
+    }
+    currentInput += value;
+    updateDisplay();
+}
 
-const display = document.querySelector('.calculator_display')
-
-keys.addEventListener('click', e => {
-    if (e.target.matches('button')) {
-        const key = e.target
-        const action = key.dataset.action
-        const keyContent = key.textContent
-        const displayedNum = display.textContent
+//Function to give result 
+function Result() {
+    try {
+        currentInput = eval(currentInput).toString();
+        updateDisplay();
+    } catch(error){
+        currentInput = "Error";
+        updateDisplay();
     }
-    if (!action) {
-        if (displayedNum === '0') {
-            display.textContent = keyContent
-        } else {
-            display.textContent = displayedNum + keyContent
-        }
-    }
-    if (action === 'decimal') {
-        display.textContent = displayedNum + '.'
-    }
-    if (
-        action === 'add' ||
-        action === 'subtract' ||
-        action === 'multiply' ||
-        action === 'divide'
-    ) {
-        key.classList.add('is-depressed')
-   
-    // Remove .is-depressed class from all keys
-    Array.from(key.parentNode.children)
-        .forEach(k => k.classList.remove('is-depressed'))
-    }
-})
+}
+//Function for backspace
+function Back() {
+    currentInput = currentInput.slice(0,-1);
+    updateDisplay();
+}
+//Function to clear calculator

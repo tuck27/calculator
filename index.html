@@ -11,38 +11,35 @@
 <body>
     <div id="calculator">
         <div id="content">
-            <form>
                 <div id="output">
-                    <input type="text" id="result">
+                    <input type="text" id="result" readonly>
                 </div>
                 <div class="btn">
                     <input type="button" value="AC" onClick="Clear()" id="clear">
                     <input type="button" value="←" onclick="Back()" id="backspace">
-                    <input type="button" value='%' onclick="Solve('%')">
-                    <input type="button" value='/' onclick="Solve('/')">
+                    <input type="button" value='%' onclick="Solve('%')" id="divide">
+                    <input type="button" value='/' onclick="Solve('/')" id="divide">
                     <br>
-                    <input type="button" value='7' onclick="Solve('7')">
-                    <input type="button" value='8' onclick="Solve('8')">
-                    <input type="button" value='9' onclick="Solve('9')">
-                    <input type="button" value='x' onclick="Solve('*')">
+                    <input type="button" value='7' onclick="Solve('7')" id="divide">
+                    <input type="button" value='8' onclick="Solve('8')" id="divide">
+                    <input type="button" value='9' onclick="Solve('9')" id="divide">
+                    <input type="button" value='x' onclick="Solve('*')" id="divide">
                     <br>
-                    <input type="button" value='4' onclick="Solve('4')">
-                    <input type="button" value='5' onclick="Solve('5')">
-                    <input type="button" value='6' onclick="Solve('6')">
-                    <input type="button" value='-' onclick="Solve('-')">
+                    <input type="button" value='4' onclick="Solve('4')" id="divide">
+                    <input type="button" value='5' onclick="Solve('5')" id="divide">
+                    <input type="button" value='6' onclick="Solve('6')" id="divide">
+                    <input type="button" value='-' onclick="Solve('-')" id="divide">
                     <br>
-                    <input type="button" value='1' onclick="Solve('1')">
-                    <input type="button" value='2' onclick="Solve('2')">
-                    <input type="button" value='3' onclick="Solve('3')">
-                    <input type="button" value='+' onclick="Solve('+')">
+                    <input type="button" value='1' onclick="Solve('1')" id="divide">
+                    <input type="button" value='2' onclick="Solve('2')" id="divide">
+                    <input type="button" value='3' onclick="Solve('3')" id="divide">
+                    <input type="button" value='+' onclick="Solve('+')" id="divide">
                     <br>
-                    <input type="button" value='0' onclick="Solve('0')">
-                    <input type="button" value='.' onclick="Solve('.')">
-                    <input type="button" value='=' onclick="Result()">
+                    <input type="button" value='0' onclick="Solve('0')" id="divide">
+                    <input type="button" value='.' onclick="Solve('.')" id="divide">
+                    <input type="button" value='=' onclick="Result()" id="divide">
                 </div>
-            </form>
         </div>
-        </table>
         <script src="script.js"></script>
 </body>
 
