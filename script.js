@@ -30,3 +30,7 @@ function Back() {
     updateDisplay();
 }
 //Function to clear calculator
+function Clear() {
+    currentInput = "";
+    updateDisplay();
+}
